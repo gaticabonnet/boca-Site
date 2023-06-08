@@ -1,0 +1,277 @@
+/*Estilos globales*/
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: unset;
+}
+
+/*Header*/
+
+header{
+background-color: blue;
+color: goldenrod;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.logoConectarHeader{
+    width: 50px;
+}
+
+.navBarHeader, .navSocialMediaHeader{
+    display: flex;
+    gap: 20px;
+  
+}
+
+.navSocialMediaHeader i{
+    font-size: 20px;
+}
+
+
+body{
+    background-color: #C4C4C4;
+}
+
+/*
+    estilos banner
+*/
+
+.banner{
+    background-image: url("./imagenes/bocabanner2.jpg");
+    width: 100%;
+    height: 550px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
+
+
+/* estilos seccion noticias*/
+
+.tituloNoticias{
+  text-align: center;
+  margin: 15px;
+  padding: 15px;
+}
+
+section.noticias{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    padding: 20px;
+}
+
+
+.bg-azul{
+    background-color: #3483fa;
+    display: inline;
+    padding: 2px;
+}
+
+.precio-anterior{
+    text-decoration: line-through;
+}
+
+.color-texto-verde{
+    color: black;
+}
+
+.noticias article{
+    background-color: white;
+    width: 250px;
+}
+
+article:hover{
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+
+}
+
+.noticias article img{
+    height: 175px;
+width: 100%;
+object-fit: cover;
+}
+.noticias{
+
+}
+.noticias article div{
+    padding: 14px 14px 10px; 
+}
+.banner2{
+    background-image: url("./imagenes/La-Bombonera-FIFA-23.webp");
+    width: 100%;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* este es el codigo que hace posible la animacion de boke */
+  
+  .container {
+    overflow: hidden;
+    .slider {
+      animation: slidein 20s linear infinite;
+      white-space: nowrap;
+      .logos {
+        width: 100%;
+        display: inline-block;
+        margin: 0px 0;
+        .fab {
+          width: calc(100% / 4);
+          animation: fade-in 0.5s 
+            cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
+        }
+      }
+    }
+  }
+  
+  @keyframes slidein {
+    from {
+      transform: translate3d(0, 0, 0);
+    }
+    to {
+      transform: translate3d(-100%, 0, 0);
+    }
+  }
+  
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .carusel {
+    width: 60px;
+    margin-right: 60px;
+  }
+
+  .logo-carrusel {
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+  
+/* estilos footer */
+footer{
+  background-color: blue;
+  color: goldenrod;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.footercont{
+  /* padding: 1vw; */
+  width: 100%;
+  max-width: 1200px;
+  display: grid;
+  grid-template:
+  "gc   sep1    muni  sep2    contacto sep3    mapa" 200px /
+   1fr  auto    1fr   auto    1fr      auto    1fr;
+  padding: 12px 20px;
+  gap: 20px;
+  justify-content: center;
+} 
+  .footersep{
+      width: 2px;
+      border: none;
+      background-color: black;
+      height: 80%;
+  }
+  .sep1{
+      grid-area: sep1;
+      place-self: center;
+  }
+  .sep2{
+      grid-area: sep2;
+      place-self: center;
+  }
+  .sep3{
+      grid-area: sep3;
+      place-self: center;
+  }
+  .logogc{
+      grid-area: gc;
+      place-self: center;
+      height: 100%;
+      /* width: 100%; */
+      width: 184px;
+
+      background-image: url("./imagenes/bocalogo.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      /* background-color: aqua; */
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  .logogc:hover{
+      animation: flip 1s;
+  }
+  .infomuni{
+      grid-area: muni;
+      place-self: center;
+      font-size: 90%;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      height: 100%;
+      text-align: left;
+  }
+  .contacto{
+      grid-area: contacto;
+      place-self: center;
+      font-size: 88%;
+      
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      height: 100%;
+      gap: 20px;
+      text-align: center;
+      padding-bottom: 18px;
+  }
+      .iconoshoriz .socialitem:hover{
+          color: #e0e0e0;
+          position: relative;
+          bottom: 3px;
+      }
+
+  .socialitem i {
+    font-size: 30px;
+  }
+  .mapa{
+      grid-area: mapa;
+      place-self: center;
+      font-size: 90%;
+
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+  }
